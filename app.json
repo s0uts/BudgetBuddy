@@ -1,0 +1,54 @@
+{
+  "expo": {
+    "name": "BudgetBuddy",
+    "slug": "budgetbuddy",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#8B5CF6"
+    },
+    "ios": {
+      "supportsTablet": false,
+      "bundleIdentifier": "ca.budgetbuddy.app",
+      "infoPlist": {
+        "NSFaceIDUsageDescription": "BudgetBuddy uses Face ID to keep your financial data secure."
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#8B5CF6"
+      },
+      "package": "ca.budgetbuddy.app"
+    },
+    "web": {
+      "bundler": "metro",
+      "output": "static",
+      "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      "expo-router",
+      "expo-secure-store",
+      [
+        "expo-notifications",
+        {
+          "icon": "./assets/notification-icon.png",
+          "color": "#8B5CF6"
+        }
+      ]
+    ],
+    "scheme": "budgetbuddy",
+    "experiments": {
+      "typedRoutes": true
+    },
+    "extra": {
+      "eas": {
+        "projectId": "your-eas-project-id"
+      }
+    }
+  }
+}

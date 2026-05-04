@@ -1,0 +1,25 @@
+node_modules/
+.expo/
+dist/
+web-build/
+.env
+.env.local
+*.log
+
+# Backend
+backend/node_modules/
+backend/dist/
+backend/.env
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Expo
+*.jks
+*.p8
+*.p12
+*.key
+*.mobileprovision
+*.orig.*
+.claude/
