@@ -10,10 +10,9 @@
     "lint": "eslint . --ext .ts,.tsx"
   },
   "dependencies": {
-    "@expo/vector-icons": "^14.0.0",
     "@expo-google-fonts/inter": "^0.2.3",
+    "@expo/vector-icons": "^14.0.0",
     "@react-native-async-storage/async-storage": "1.23.1",
-    "@supabase/supabase-js": "^2.44.2",
     "d3-hierarchy": "^3.1.2",
     "d3-shape": "^3.2.0",
     "expo": "~52.0.0",
@@ -38,6 +37,7 @@
   },
   "devDependencies": {
     "@babel/core": "^7.24.0",
+    "@supabase/supabase-js": "^2.105.3",
     "@types/d3-hierarchy": "^3.1.7",
     "@types/d3-shape": "^3.1.6",
     "@types/react": "~18.3.12",
@@ -46,7 +46,8 @@
     "eslint": "^8.57.0",
     "eslint-plugin-react": "^7.34.0",
     "eslint-plugin-react-native": "^4.1.0",
-    "typescript": "^5.3.3"
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.3"
   },
   "private": true
 }
