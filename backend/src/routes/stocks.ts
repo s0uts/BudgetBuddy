@@ -98,8 +98,11 @@ async function getQuote(ticker: string): Promise<StockQuote | null> {
     return cached.data as StockQuote;
   }
 
-  // Try Twelve Data first, fall back to Yahoo
-  const quote = await fetchFromTwelveData(ticker) ?? await fetchFromYahoo(ticker);
+  // Twelve Data returns USD for Canadian .TO tickers — use Yahoo for those
+  const isCanadian = ticker.toUpperCase().endsWith('.TO');
+  const quote = isCanadian
+    ? await fetchFromYahoo(ticker)
+    : await fetchFromTwelveData(ticker) ?? await fetchFromYahoo(ticker);
   if (quote) {
     PRICE_CACHE.set(ticker.toUpperCase(), {
       price: quote.price,
